@@ -165,26 +165,29 @@ const Hero = () => {
         >
           <div
             ref={cardRef}
-            className="glass p-[34px_30px] rounded-[26px] transition-transform duration-150 ease-out"
+            className="glass p-[34px_30px] pt-[50px] rounded-[26px] transition-transform duration-150 ease-out relative mt-12 text-center flex flex-col items-center"
             style={{ transformStyle: "preserve-3d" }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {/* Card top */}
-            <div className="flex justify-between items-start mb-10">
-              <div
-                className="w-14 h-14 rounded-[16px] overflow-hidden bg-white/5 border border-white/10"
-              >
-                <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover" />
+            {/* Avatar overlapping top center */}
+            <div 
+              className="absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full overflow-hidden border-[6px] border-[#06070a] shadow-[0_0_30px_rgba(124,92,255,0.2)] z-10 bg-[#12141d]"
+            >
+                <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover object-[center_20%]" />
+            </div>
+
+            {/* Card top info */}
+            <div className="flex justify-between items-start mb-6 w-full">
+              <div className="font-mono text-[0.68rem] text-[#5c6178] text-left leading-relaxed">
+                ID // CSE-2028
               </div>
               <div className="font-mono text-[0.68rem] text-[#5c6178] text-right leading-relaxed">
-                ID // CSE-2028
-                <br />
                 COIMBATORE, IN
               </div>
             </div>
 
-            <div className="font-display text-[1.5rem] font-semibold mb-1">
+            <div className="font-display text-[1.6rem] font-semibold mb-1">
               Bharath S
             </div>
             <div className="text-[0.85rem] text-[#9aa0b4] mb-[26px]">
@@ -192,7 +195,7 @@ const Hero = () => {
             </div>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2 mb-[26px]">
+            <div className="flex flex-wrap justify-center gap-2 mb-[26px]">
               {["Python", "Figma", "UI/UX", "Branding", "OpenCV"].map(
                 (tag) => (
                   <span
@@ -206,9 +209,9 @@ const Hero = () => {
             </div>
 
             {/* Footer */}
-            <div className="flex justify-between items-center border-t border-white/[0.09] pt-[18px]">
+            <div className="flex justify-between items-center w-full border-t border-white/[0.09] pt-[18px]">
               <span className="text-[0.76rem] text-[#5c6178]">
-                Founder, DEZIGNO Studio
+                Founder, DEZIGNO
               </span>
               <span className="font-display text-[0.95rem] font-semibold grad-text">
                 est. 2024
