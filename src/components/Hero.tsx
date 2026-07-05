@@ -9,6 +9,14 @@ const roles = [
   "Founder of DEZIGNO",
 ];
 
+const roleColors = [
+  "#35e6c4",
+  "#7c5cff",
+  "#ff7eb3",
+  "#6ff0d6",
+  "#b7a6ff",
+];
+
 const Hero = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -77,7 +85,7 @@ const Hero = () => {
               <motion.span
                 key={roleIndex}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0, color: roleColors[roleIndex % roleColors.length] }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6, ease: [0.16, 0.84, 0.44, 1] }}
                 className="absolute left-0 whitespace-nowrap"
@@ -165,12 +173,9 @@ const Hero = () => {
             {/* Card top */}
             <div className="flex justify-between items-start mb-10">
               <div
-                className="w-14 h-14 rounded-[16px] flex items-center justify-center font-display font-semibold text-[#04050a] text-[1.3rem]"
-                style={{
-                  background: "linear-gradient(135deg, #7c5cff, #35e6c4)",
-                }}
+                className="w-14 h-14 rounded-[16px] overflow-hidden bg-white/5 border border-white/10"
               >
-                BS
+                <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover" />
               </div>
               <div className="font-mono text-[0.68rem] text-[#5c6178] text-right leading-relaxed">
                 ID // CSE-2028
