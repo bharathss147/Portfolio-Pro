@@ -105,7 +105,7 @@
 
   /* Buttons */
   .btn {
-    @apply inline-flex items-center gap-2 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer;
+    @apply inline-flex items-center gap-2 rounded-full text-sm font-semibold transition-all duration-700 cursor-pointer;
     border: 1px solid transparent;
   }
 

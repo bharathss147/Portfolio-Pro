@@ -17,34 +17,6 @@ export function useTypewriter(
     return () => clearTimeout(timer);
   }, [initialDelay]);
 
-  const tick = useCallback(() => {
-    const currentWord = words[wordIndex];
-
-    if (isDeleting) {
-      setText(currentWord.slice(0, text.length - 1));
-      if (text.length === 1) {
-        setIsDeleting(false);
-        setWordIndex((prev) => (prev + 1) % words.length);
-      }
-    } else {
-      setText(currentWord.slice(0, text.length + 1));
-      if (text.length === currentWord.length) {
-        setIsDeleting(true);
-        return pauseTime;
-      }
-    }
-    return isDeleting ? deletingSpeed : typingSpeed;
-  }, [text, wordIndex, isDeleting, words, typingSpeed, deletingSpeed, pauseTime]);
-
-  useEffect(() => {
-    if (!isStarted) return;
-    const delay = tick();
-    const timer = setTimeout(() => {
-      tick();
-    }, delay);
-
-    return () => clearTimeout(timer);
-  });
 
   useEffect(() => {
     if (!isStarted) return;
