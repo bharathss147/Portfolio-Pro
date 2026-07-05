@@ -19,7 +19,13 @@ const Dezigno = () => {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="glass p-14 max-md:p-[36px_26px] grid grid-cols-1 lg:grid-cols-2 gap-[50px] items-center relative">
+          <div 
+            className="glass p-14 max-md:p-[36px_26px] grid grid-cols-1 lg:grid-cols-2 gap-[50px] items-center relative"
+            style={{ 
+              background: 'linear-gradient(135deg, rgba(124,92,255,0.08), rgba(53,230,196,0.08))', 
+              borderColor: 'rgba(53,230,196,0.15)' 
+            }}
+          >
             <div>
               <div className="font-display text-[clamp(2.2rem,5vw,3.2rem)] font-bold tracking-[-0.02em] mb-3.5">
                 DE<span className="grad-text">ZIGNO</span>

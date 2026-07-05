@@ -45,15 +45,15 @@ const GlowCursor = () => {
       {/* Glow cursor */}
       <div
         ref={glowRef}
-        className="fixed z-[1] pointer-events-none hidden hover-device:block"
+        className="fixed z-[1] pointer-events-none"
         style={{
-          width: 420,
-          height: 420,
+          width: 500,
+          height: 500,
           borderRadius: "50%",
           transform: "translate(-50%, -50%)",
           background:
-            "radial-gradient(circle, rgba(124,92,255,0.10) 0%, rgba(53,230,196,0.05) 45%, transparent 70%)",
-          transition: "left 0.12s linear, top 0.12s linear",
+            "radial-gradient(circle, rgba(124,92,255,0.15) 0%, rgba(53,230,196,0.12) 40%, transparent 70%)",
+          transition: "left 0.1s linear, top 0.1s linear",
         }}
       />
       {/* Trailing dot */}

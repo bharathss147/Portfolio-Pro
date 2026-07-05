@@ -10,7 +10,7 @@ const roles = [
 ];
 
 const Hero = () => {
-  const typedText = useTypewriter(roles, 120, 80, 2000);
+  const typedText = useTypewriter(roles, 180, 100, 3000);
   const cardRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
 
@@ -195,16 +195,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll cue */}
-      <div className="absolute bottom-[34px] left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[#5c6178] font-mono text-[0.68rem] tracking-[0.1em]">
-        <span>SCROLL</span>
-        <div
-          className="w-px h-[34px] animate-scroll-line"
-          style={{
-            background: "linear-gradient(#35e6c4, transparent)",
-          }}
-        />
-      </div>
+
     </section>
   );
 };

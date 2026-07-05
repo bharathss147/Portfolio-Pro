@@ -4,7 +4,6 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const skillCategories = [
   {
-    icon: "💻",
     title: "Programming & Dev",
     skills: [
       { name: "C", level: "Core", width: 78 },
@@ -13,7 +12,6 @@ const skillCategories = [
     ],
   },
   {
-    icon: "🧩",
     title: "UI / UX Design",
     skills: [
       { name: "Wireframing & Prototyping", level: "Core", width: 85 },
@@ -22,7 +20,6 @@ const skillCategories = [
     ],
   },
   {
-    icon: "🎨",
     title: "Graphic Design",
     skills: [
       { name: "Brand Identity & Logo", level: "Core", width: 90 },
@@ -31,7 +28,6 @@ const skillCategories = [
     ],
   },
   {
-    icon: "🤝",
     title: "Soft Skills",
     skills: [
       { name: "Client Management", level: "Founder-tested", width: 82 },
@@ -73,9 +69,6 @@ const SkillCard = ({
   return (
     <div ref={ref} className="glass p-7" ref-trigger="true">
       <h3 className="font-display text-[1.15rem] mb-5 flex items-center gap-2.5 font-semibold">
-        <span className="w-[34px] h-[34px] rounded-[10px] bg-white/[0.07] flex items-center justify-center text-base">
-          {category.icon}
-        </span>
         {category.title}
       </h3>
       <div ref={barsRef} className="space-y-4">
