@@ -165,14 +165,14 @@ const Hero = () => {
         >
           <div
             ref={cardRef}
-            className="transition-transform duration-150 ease-out relative mt-12"
+            className="transition-transform duration-150 ease-out relative mt-20"
             style={{ transformStyle: "preserve-3d" }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
             {/* Avatar overlapping top center */}
             <div 
-              className="absolute -top-14 left-1/2 -translate-x-1/2 w-28 h-28 rounded-full overflow-hidden border-[6px] border-[#06070a] shadow-[0_0_30px_rgba(124,92,255,0.2)] z-20 bg-[#12141d]"
+              className="absolute -top-18 left-1/2 -translate-x-1/2 w-36 h-36 rounded-full overflow-hidden border-[6px] border-[#06070a] shadow-[0_0_30px_rgba(124,92,255,0.2)] z-20 bg-[#12141d]"
               style={{ transform: "translateX(-50%) translateZ(30px)" }}
             >
                 <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover object-[center_20%]" />
