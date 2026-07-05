@@ -165,21 +165,21 @@ const Hero = () => {
         >
           <div
             ref={cardRef}
-            className="transition-transform duration-150 ease-out relative mt-20"
+            className="transition-transform duration-150 ease-out flex flex-col items-center gap-6 relative"
             style={{ transformStyle: "preserve-3d" }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {/* Avatar overlapping top center */}
+            {/* Avatar ABOVE the card (not overlapping) */}
             <div 
-              className="absolute -top-18 left-1/2 -translate-x-1/2 w-36 h-36 rounded-full overflow-hidden border-[6px] border-[#06070a] shadow-[0_0_30px_rgba(124,92,255,0.2)] z-20 bg-[#12141d]"
-              style={{ transform: "translateX(-50%) translateZ(30px)" }}
+              className="w-36 h-36 rounded-full overflow-hidden border-2 border-white/10 shadow-[0_0_30px_rgba(124,92,255,0.2)] z-20 bg-[#12141d]"
+              style={{ transform: "translateZ(30px)" }}
             >
                 <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover object-[center_20%]" />
             </div>
 
             {/* Glass Card Background */}
-            <div className="glass p-[34px_30px] pt-[50px] rounded-[26px] text-center flex flex-col items-center relative z-10">
+            <div className="glass p-[34px_30px] rounded-[26px] text-center flex flex-col items-center w-full relative z-10">
               {/* Card top info */}
             <div className="flex justify-between items-start mb-6 w-full">
               <div className="font-mono text-[0.68rem] text-[#5c6178] text-left leading-relaxed">
