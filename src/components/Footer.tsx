@@ -7,7 +7,7 @@ const Footer = () => {
         </span>
         <div className="flex gap-6">
           <a
-            href="https://github.com/bharath"
+            href="https://github.com/bharathss147"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-[0.78rem] text-[#5c6178] transition-colors duration-300 hover:text-[#eceef4]"
@@ -15,7 +15,7 @@ const Footer = () => {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/bharath"
+            href="https://www.linkedin.com/in/bharathssns/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRKVh8qU4RaCVwh5UUB%2BZHQ%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="font-mono text-[0.78rem] text-[#5c6178] transition-colors duration-300 hover:text-[#eceef4]"

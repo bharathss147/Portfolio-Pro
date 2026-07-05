@@ -36,7 +36,7 @@ const Contact = () => {
               </a>
 
               <a
-                href="https://linkedin.com/in/bharath"
+                href="https://www.linkedin.com/in/bharathssns/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BRKVh8qU4RaCVwh5UUB%2BZHQ%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-[#9aa0b4] transition-colors duration-300 hover:text-[#eceef4] group"
@@ -49,13 +49,13 @@ const Contact = () => {
                     LinkedIn
                   </span>
                   <span className="text-[0.98rem] font-medium">
-                    linkedin.com/in/bharath
+                    linkedin.com/in/bharathssns
                   </span>
                 </div>
               </a>
 
               <a
-                href="https://github.com/bharath"
+                href="https://github.com/bharathss147"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 text-[#9aa0b4] transition-colors duration-300 hover:text-[#eceef4] group"
@@ -68,7 +68,7 @@ const Contact = () => {
                     GitHub
                   </span>
                   <span className="text-[0.98rem] font-medium">
-                    github.com/bharath
+                    github.com/bharathss147
                   </span>
                 </div>
               </a>
