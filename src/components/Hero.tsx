@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import { useTypewriter } from "@/hooks/useTypewriter";
+import { motion, AnimatePresence } from "framer-motion";
 
 const roles = [
   "Software Developer",
@@ -10,12 +10,16 @@ const roles = [
 ];
 
 const Hero = () => {
-  const typedText = useTypewriter(roles, 250, 150, 4000);
+  const [roleIndex, setRoleIndex] = useState(0);
   const cardRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+    const interval = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    }, 3500);
+    return () => clearInterval(interval);
   }, []);
 
   // 3D tilt for ID card
@@ -67,10 +71,24 @@ const Hero = () => {
             software.
           </h1>
 
-          {/* Typewriter */}
-          <div className="text-[clamp(1rem,2vw,1.25rem)] text-[#9aa0b4] mb-[34px] min-h-[1.6em] flex items-center gap-2.5 font-medium">
-            <span>{typedText}</span>
-            <span className="inline-block w-0.5 h-[1.1em] bg-[#35e6c4] animate-blink" />
+          {/* Animated Roles */}
+          <div className="text-[clamp(1rem,2vw,1.25rem)] text-[#9aa0b4] mb-[34px] min-h-[1.6em] flex items-center font-medium relative overflow-hidden">
+            <AnimatePresence mode="wait">
+              <motion.span
+                key={roleIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6, ease: [0.16, 0.84, 0.44, 1] }}
+                className="absolute left-0 whitespace-nowrap"
+              >
+                {roles[roleIndex]}
+              </motion.span>
+            </AnimatePresence>
+            {/* Invisible spacer to maintain layout */}
+            <span className="invisible pointer-events-none whitespace-nowrap" aria-hidden="true">
+              {roles.reduce((a, b) => (a.length > b.length ? a : b))}
+            </span>
           </div>
 
           {/* Actions */}
