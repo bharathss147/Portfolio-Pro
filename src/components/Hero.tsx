@@ -175,7 +175,7 @@ const Hero = () => {
               <div
                 className="w-14 h-14 rounded-[16px] overflow-hidden bg-white/5 border border-white/10"
               >
-                <img src="https://avatars.githubusercontent.com/bharathss147" alt="Bharath S" className="w-full h-full object-cover" />
+                <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover" />
               </div>
               <div className="font-mono text-[0.68rem] text-[#5c6178] text-right leading-relaxed">
                 ID // CSE-2028
