@@ -39,7 +39,7 @@ const Hero = () => {
       <div className="max-w-[1160px] mx-auto px-8 grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-[60px] items-center">
         {/* Left content */}
         <div
-          className={`transition-all duration-1000 ${
+          className={`transition-all duration-[2500ms] ${
             isMounted
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"
@@ -127,7 +127,7 @@ const Hero = () => {
 
         {/* ID Card */}
         <div
-          className={`transition-all duration-1000 delay-200 ${
+          className={`transition-all duration-[2500ms] delay-[400ms] ${
             isMounted
               ? "opacity-100 translate-y-0"
               : "opacity-0 translate-y-8"

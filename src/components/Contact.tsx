@@ -19,7 +19,7 @@ const Contact = () => {
           <div className="glass p-10 max-w-[680px]">
             <div className="space-y-6">
               <a
-                href="mailto:bharath@example.com"
+                href="mailto:bharathss147@gmail.com"
                 className="flex items-center gap-4 text-[#9aa0b4] transition-colors duration-300 hover:text-[#eceef4] group"
               >
                 <span className="w-[42px] h-[42px] rounded-xl bg-white/[0.07] flex items-center justify-center text-lg transition-all duration-300 group-hover:bg-[rgba(53,230,196,0.1)] group-hover:text-[#35e6c4]">
@@ -30,7 +30,7 @@ const Contact = () => {
                     Email
                   </span>
                   <span className="text-[0.98rem] font-medium">
-                    bharath@example.com
+                    bharathss147@gmail.com
                   </span>
                 </div>
               </a>
