@@ -11,7 +11,8 @@
     "noEmit": true,
     "strict": false,
     "noUnusedLocals": false,
-    "noUnusedParameters": false
+    "noUnusedParameters": false,
+    "types": ["node"]
   },
   "include": ["vite.config.ts"]
 }
