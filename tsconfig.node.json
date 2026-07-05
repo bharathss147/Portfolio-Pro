@@ -12,8 +12,7 @@
     "strict": false,
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "types": ["node"],
-    "typeRoots": []
+    "types": ["node"]
   },
   "include": ["vite.config.ts"]
 }
