@@ -53,7 +53,6 @@ const GlowCursor = () => {
           transform: "translate(-50%, -50%)",
           background:
             "radial-gradient(circle, rgba(124,92,255,0.15) 0%, rgba(53,230,196,0.12) 40%, transparent 70%)",
-          transition: "left 0.1s linear, top 0.1s linear",
         }}
       />
       {/* Trailing dot */}

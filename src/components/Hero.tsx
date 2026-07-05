@@ -10,7 +10,7 @@ const roles = [
 ];
 
 const Hero = () => {
-  const typedText = useTypewriter(roles, 180, 100, 3000);
+  const typedText = useTypewriter(roles, 250, 150, 4000);
   const cardRef = useRef<HTMLDivElement>(null);
   const [isMounted, setIsMounted] = useState(false);
 
