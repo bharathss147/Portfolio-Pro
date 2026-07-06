@@ -1,4 +1,5 @@
 import ScrollReveal, { ScrollRevealItem } from "./ScrollReveal";
+import { ExternalLink, Download } from "lucide-react";
 
 const projectsData = [
   {
@@ -21,6 +22,7 @@ const projectsData = [
     description:
       "A concept project exploring modern digital currency, fintech UI, and a blockchain-inspired user experience.",
     stack: ["Fintech UI", "Concept Design"],
+    downloadLink: "https://drive.google.com/file/d/134wkXVEjQBC0jGG3LQc0xer97cEJAQHh/view?usp=drive_link",
   },
   {
     num: "04",
@@ -36,6 +38,7 @@ const projectsData = [
     description:
       "Designed and developed a modern portfolio and service website showcasing branding, graphic design, UI/UX, and web development services.",
     stack: ["Web Design", "Branding"],
+    link: "https://www.dezigno.studio",
   },
 ];
 
@@ -69,9 +72,33 @@ const Projects = () => {
                     </span>
                   )}
                 </div>
-                <h3 className="font-display text-[1.35rem] mb-2.5 font-semibold">
-                  {project.title}
-                </h3>
+                <div className="flex items-center gap-3 mb-2.5">
+                  <h3 className="font-display text-[1.35rem] font-semibold">
+                    {project.title}
+                  </h3>
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#9aa0b4] hover:text-white transition-colors"
+                      aria-label="Visit project website"
+                    >
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
+                  {project.downloadLink && (
+                    <a
+                      href={project.downloadLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#9aa0b4] hover:text-white transition-colors"
+                      aria-label="Download APK"
+                    >
+                      <Download size={20} />
+                    </a>
+                  )}
+                </div>
                 <p className="text-[#9aa0b4] text-[0.92rem] mb-[18px]">
                   {project.description}
                 </p>
