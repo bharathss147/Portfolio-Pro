@@ -20,7 +20,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],
-        display: ["Clash Display", "Inter", "sans-serif"],
+        display: ["Space Grotesk", "Clash Display", "sans-serif"],
         mono: ["JetBrains Mono", "monospace"],
       },
       colors: {
@@ -28,9 +28,22 @@ export default {
         "border-strong": "rgba(255,255,255,0.16)",
         input: "rgba(255,255,255,0.09)",
         ring: "#7c5cff",
-        background: "#06070a",
-        "bg-soft": "#0b0d12",
+        background: "#03002E", // Base dark blue
+        "bg-soft": "#010048",
         foreground: "#eceef4",
+        
+        // Futuristic Project Colors
+        "project-bg-1": "#03002E",
+        "project-bg-2": "#010048",
+        "project-bg-3": "#010057",
+        "project-bg-4": "#02006C",
+        "project-bg-5": "#090088",
+        
+        // Accent Glows
+        "glow-cyan": "#00D9FF",
+        "glow-teal": "#00FFD5",
+        "glow-purple": "#6E5BFF",
+        
         primary: {
           DEFAULT: "#7c5cff",
           foreground: "#04050a",

@@ -162,7 +162,6 @@
     transition: width 1.3s cubic-bezier(0.16, 0.84, 0.44, 1);
   }
 }
-
 /* ============ UTILITIES ============ */
 @layer utilities {
   .font-display {

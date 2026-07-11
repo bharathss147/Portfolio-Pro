@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { MapPin, Crown } from "lucide-react";
 
 const roles = [
   "Software Developer",
@@ -165,67 +166,93 @@ const Hero = () => {
         >
           <div
             ref={cardRef}
-            className="transition-transform duration-150 ease-out flex flex-col items-center gap-6 relative"
+            className="transition-transform duration-150 ease-out relative w-full max-w-[650px] mx-auto lg:mx-0"
             style={{ transformStyle: "preserve-3d" }}
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
           >
-            {/* Avatar ABOVE the card (not overlapping) */}
-            <div 
-              className="w-36 h-36 rounded-full overflow-hidden border-2 border-white/10 shadow-[0_0_30px_rgba(124,92,255,0.2)] z-20 bg-[#12141d]"
-              style={{ transform: "translateZ(30px)" }}
-            >
-                <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover object-[center_20%]" />
-            </div>
-
             {/* Glass Card Background */}
-            <div className="glass p-[34px_30px] rounded-[26px] text-center flex flex-col items-center w-full relative z-10">
+            <div className="glass p-[28px_32px] rounded-[26px] flex flex-col items-center w-full relative z-10 border border-blue-500/40 shadow-[0_0_35px_rgba(37,99,235,0.15)] overflow-hidden"
+                 style={{
+                   background: "radial-gradient(circle at 10% 20%, rgba(15, 23, 42, 0.95) 0%, rgba(3, 7, 18, 0.98) 100%)",
+                   backgroundImage: "linear-gradient(to right, rgba(37,99,235,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(37,99,235,0.04) 1px, transparent 1px)",
+                   backgroundSize: "40px 40px"
+                 }}>
+              
               {/* Card top info */}
-            <div className="flex justify-between items-start mb-6 w-full">
-              <div className="font-mono text-[0.68rem] text-[#5c6178] text-left leading-relaxed">
-                ID // CSE-2028
+              <div className="flex justify-between items-start w-full mb-8 relative z-10">
+                <div className="font-mono text-[0.75rem] text-blue-400/80 tracking-wider font-semibold">
+                  ID // CSE-2028
+                </div>
+                <div className="font-mono text-[0.75rem] text-blue-400/80 flex items-center gap-1.5 tracking-wider font-semibold">
+                  COIMBATORE, IN <MapPin size={14} className="text-blue-500" />
+                </div>
               </div>
-              <div className="font-mono text-[0.68rem] text-[#5c6178] text-right leading-relaxed">
-                COIMBATORE, IN
+
+              <div className="flex flex-col md:flex-row gap-8 w-full relative z-10">
+                {/* Left Side: Avatar & Signature */}
+                <div className="flex flex-col items-center shrink-0">
+                  <div className="w-32 h-32 md:w-[140px] md:h-[140px] rounded-full overflow-hidden border-2 border-blue-500/60 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_50px_rgba(59,130,246,0.8)] transition-shadow duration-300 cursor-pointer bg-[#12141d] mb-5 relative group"
+                       style={{ transform: "translateZ(20px)" }}>
+                    <div className="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <img src="/profile.jpg" alt="Bharath S" className="w-full h-full object-cover object-[center_20%]" />
+                  </div>
+                  
+                  {/* Signature */}
+                  <div className="flex flex-col items-center -mt-2">
+                    <span style={{ fontFamily: "'Caveat', cursive" }} className="text-blue-400 text-[2.4rem] transform -rotate-6 font-semibold">BHARATH.S</span>
+                    <div className="w-24 h-[1px] bg-gradient-to-r from-transparent via-blue-500/60 to-transparent mt-1"></div>
+                  </div>
+                </div>
+
+                {/* Vertical Divider */}
+                <div className="hidden md:block w-[1px] bg-gradient-to-b from-transparent via-blue-500/30 to-transparent my-2"></div>
+
+                {/* Right Side: Bio & Tags */}
+                <div className="flex flex-col flex-1 text-center md:text-left pt-2">
+                  <div className="font-display text-[2.2rem] font-bold mb-1 tracking-tight text-white drop-shadow-md leading-none">
+                    Bharath S
+                  </div>
+                  <div className="text-[0.95rem] text-blue-400/90 mb-4 font-medium">
+                    Developer · Designer · Founder
+                  </div>
+                  
+                  <div className="w-12 h-[2px] bg-blue-500 rounded-full mb-5 mx-auto md:mx-0 shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+
+                  <p className="text-[0.9rem] text-[#9aa0b4] mb-6 leading-relaxed max-w-[280px] mx-auto md:mx-0">
+                    I design and build digital experiences that are fast, modern and meaningful.
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap justify-center md:justify-start gap-2.5 mt-auto">
+                    {["Python", "Figma", "UI/UX", "Branding", "OpenCV"].map(
+                      (tag) => (
+                        <span
+                          key={tag}
+                          className="font-mono text-[0.68rem] px-3 py-1.5 rounded-lg border border-blue-500/30 text-blue-200/80 bg-blue-500/5 hover:border-blue-500/60 hover:bg-blue-500/10 transition-colors"
+                        >
+                          {tag}
+                        </span>
+                      )
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <div className="font-display text-[1.6rem] font-semibold mb-1">
-              Bharath S
-            </div>
-            <div className="text-[0.85rem] text-[#9aa0b4] mb-[26px]">
-              Developer · Designer · Founder
-            </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap justify-center gap-2 mb-[26px]">
-              {["Python", "Figma", "UI/UX", "Branding", "OpenCV"].map(
-                (tag) => (
-                  <span
-                    key={tag}
-                    className="font-mono text-[0.68rem] px-2.5 py-[5px] rounded-lg bg-white/5 border border-white/[0.09] text-[#9aa0b4]"
-                  >
-                    {tag}
-                  </span>
-                )
-              )}
-            </div>
-
-            {/* Footer */}
-            <div className="flex justify-between items-center w-full border-t border-white/[0.09] pt-[18px]">
-              <span className="text-[0.76rem] text-[#5c6178]">
-                Founder, DEZIGNO
-              </span>
-              <span className="font-display text-[0.95rem] font-semibold grad-text">
-                est. 2024
-              </span>
+              {/* Footer */}
+              <div className="flex justify-between items-center w-full pt-6 mt-6 border-t border-blue-500/20 relative z-10">
+                <div className="flex items-center gap-2 text-[0.8rem] text-blue-400/70 font-medium">
+                  <Crown size={16} className="text-blue-500" />
+                  Founder, DEZIGNO
+                </div>
+                <div className="font-display text-[1rem] font-bold text-blue-400">
+                  est. 2024
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-
     </section>
   );
 };
