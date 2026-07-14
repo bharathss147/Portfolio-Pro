@@ -416,9 +416,11 @@ const ProjectCard = ({ project, index }: { project: typeof projectsData[0], inde
             {/* Top Left Number & Top Right Link Button (Absolute position for standard look) */}
             <div className="absolute top-8 left-8 right-8 flex justify-between items-start z-30 pointer-events-none">
                <span className="font-mono text-white/50 text-sm">{project.id}</span>
-               <a href={project.link} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-white group/btn pointer-events-auto transition-all duration-300 hover:bg-[#6E5BFF]/20 hover:border-[#6E5BFF]/50 hover:shadow-[0_0_20px_rgba(110,91,255,0.3)] hover:rotate-6">
-                  <ExternalLink size={20} className="transition-transform group-hover/btn:scale-110" />
-               </a>
+               {project.id !== "06" && (
+                 <a href={project.link} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center text-white group/btn pointer-events-auto transition-all duration-300 hover:bg-[#6E5BFF]/20 hover:border-[#6E5BFF]/50 hover:shadow-[0_0_20px_rgba(110,91,255,0.3)] hover:rotate-6">
+                    <ExternalLink size={20} className="transition-transform group-hover/btn:scale-110" />
+                 </a>
+               )}
             </div>
 
             {/* Left Visual Area (Rendered in flow unless absolute) */}
@@ -451,12 +453,14 @@ const ProjectCard = ({ project, index }: { project: typeof projectsData[0], inde
                    <div className="w-2 h-2 rounded-full bg-[#00FFD5] shadow-[0_0_10px_#00FFD5]" />
                    <span className="text-white/60 text-sm font-medium tracking-wide">{project.category}</span>
                  </div>
-                 <motion.div 
-                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-white cursor-pointer"
-                   whileHover={{ x: 5, backgroundColor: "rgba(110,91,255,0.2)", borderColor: "rgba(110,91,255,0.5)" }}
-                 >
-                   <ArrowRight size={16} />
-                 </motion.div>
+                 {project.id !== "06" && (
+                   <motion.div 
+                     className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 text-white cursor-pointer"
+                     whileHover={{ x: 5, backgroundColor: "rgba(110,91,255,0.2)", borderColor: "rgba(110,91,255,0.5)" }}
+                   >
+                     <ArrowRight size={16} />
+                   </motion.div>
+                 )}
               </div>
 
             </div>
